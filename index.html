@@ -26,8 +26,12 @@
             <div class="cd">
                 <img src="{{poster}}" alt="">
                 <h3>{{title}}</h3>
+                {{#if author includeZero=false}}
                 <span class="author">{{author}}</span>
+                {{/if}}
+                {{#if year includeZero=false}}
                 <span class="year">{{year}}</span>
+                {{/if}}
             </div>
         </script>
         <!-- ************************ -->
