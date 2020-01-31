@@ -33,5 +33,9 @@ function print(resp) {
 }
 
 function error() {
-    $('.cds-container').append(builder(resp[i]));
+    var error_config = {
+        poster : 'https://i.imgur.com/wm3Wlmc.png',
+        title : 'Impossibile soddisfare la richiesta'
+    }
+    $('.cds-container').append(builder(error_config));
 }
