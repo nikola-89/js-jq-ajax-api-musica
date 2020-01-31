@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	builder = Handlebars.compile($('#builder').html());
+    builder = Handlebars.compile($('#builder').html());
     request();
 });
 
