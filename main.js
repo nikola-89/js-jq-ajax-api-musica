@@ -17,7 +17,11 @@ $(document).ready(function() {
         $('.placeholder').text($(this).value).css('opacity', '1');
         $('.list__ul').toggle();
         $('.cds-container .cd').remove();
-        printCdByGenre($(this).attr('value'));
+        if ($(this).attr('value') == 'reset') {
+            printCd();
+        } else {
+            printCdByGenre($(this).attr('value'));
+        }
     });
 });
 // ***************************
@@ -70,7 +74,7 @@ function printSelectGenre() {
     $.each(temp, function (i, el) {
         if ($.inArray(el, unique) === -1) {
             unique.push(el);
-            $('.list__ul').append(builder_list(({"genre" : el})));
+            $('.list__ul').prepend(builder_list(({"genre" : el})));
         }
     });
 }

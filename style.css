@@ -114,6 +114,7 @@ header img {
     top: 0;
     left: 0;
     display: none;
+    cursor: pointer;
 }
 
 .list li {
@@ -122,8 +123,11 @@ header img {
 }
 
 .list li:hover {
-    cursor: pointer;
     color: #1ED760;
+}
+
+.list li[value='reset']:hover {
+    color: #298fe9;
 }
 
 .placeholder {
